@@ -1,0 +1,26 @@
+﻿L puella
+D Mädchen
+L serva
+D Sklavin,Dienerin
+L silva
+D Wald
+L via
+D Weg,Straße
+L villa
+D Haus,Landhaus
+L avus
+D Großvater
+L campus
+D Feld,freie Platz
+L equus
+D Pferd
+L murus
+D Mauer
+L servus
+D Sklave,Diner
+L vicus
+D Dorf,Gasse
+L et
+D und,auch
+L familia
+D Familie
