@@ -1,0 +1,34 @@
+﻿L esse
+D sein,sich efinden
+L est
+D er (sie,es) ist
+L sunt
+D sie sind
+L amica
+D Freundin
+L ridere
+D lachen,auslachen
+L non
+D nicht
+L cur?
+D warum?
+L parere
+D gehorchen
+L monere
+D mahen,ermahnen
+L debere
+D müssen,sollen
+L quid?
+D was?
+L timere
+D fürchten,Angst haben
+L oculus
+D Auge
+L dolere
+D schmerzen,wehtun
+L nunc
+D nun,jetzt
+L Lydus servus
+D Sklave Lydus
+L tacere
+D schweigen,verschweigen

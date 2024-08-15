@@ -1,0 +1,30 @@
+﻿L hic
+D hier
+L dominus
+D Herr
+L ibi
+D dort
+L sedere
+D sitzen
+L sed
+D aber,sondern 
+L respondere
+D antworten
+L augere
+D vergrößern,vermehren
+L nam
+D denn,nämlich
+L tamen
+D dennoch,jedoch
+L adhuc
+D bis jetzt,noch
+L neque
+D und nicht,auch nicht
+L neque...neque
+D weder...noch
+L quis?
+D wer?
+L docere
+D lehren,unterrichten
+L lingua
+D Sprache,Rede

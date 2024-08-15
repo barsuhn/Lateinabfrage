@@ -1,8 +1,33 @@
-﻿Console.Write("Dateiname: ");
+﻿string DateiAuswahl(string verzeichnisName)
+{
+    var files = Directory.EnumerateFiles(verzeichnisName).ToList();
 
-var dateiName = Console.ReadLine();
+    for (var i = 0; i < files.Count; i++)
+    {
+        Console.WriteLine($"{i}> {files[i]}");
+    }
+    Console.WriteLine();
+
+    int index;
+
+    do
+    {
+        Console.Write("> ");
+        var auswahl = Console.ReadLine();
+
+        if (!Int32.TryParse(auswahl, out index))
+            index = -1;
+
+    } while (index < 0 || index >= files.Count);
+
+    Console.WriteLine();
+
+    return files[index];
+}
+
+
 var verzeichnisName = "Vokabeln";
-var pfad = Path.Combine(verzeichnisName, dateiName);
+var pfad = DateiAuswahl(verzeichnisName);
 
 if (!File.Exists(pfad))
 {
@@ -22,7 +47,6 @@ while (!string.IsNullOrEmpty(latein))
     var deutsch = datenStrom.ReadLine();
 
     Console.WriteLine($"Richtig: {deutsch.Substring(2)}");
-    Console.ReadLine();
 
     latein = datenStrom.ReadLine();
 }
