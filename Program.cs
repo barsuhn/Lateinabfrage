@@ -1,4 +1,6 @@
-﻿string DateiAuswahl(string verzeichnisName)
+﻿using Lateinabfrage;
+
+string DateiAuswahl(string verzeichnisName)
 {
     var files = Directory.EnumerateFiles(verzeichnisName).ToList();
 
@@ -25,29 +27,60 @@
     return files[index];
 }
 
+Vokabeln AusDatei(string pfad)
+{
+    var vokabeln = new Vokabeln();
+
+    if (!File.Exists(pfad))
+    {
+        Console.WriteLine($"Die Datei {pfad} gibt es scheinbar nicht!");
+
+        return vokabeln;
+    }
+
+    using var datenStrom = new StreamReader(pfad);
+    var latein = datenStrom.ReadLine();
+
+    while (!string.IsNullOrEmpty(latein))
+    {
+        var deutsch = datenStrom.ReadLine();
+
+        vokabeln.Latein.Add(latein);
+        vokabeln.Deutsch.Add(deutsch);
+
+        latein = datenStrom.ReadLine();
+    }
+
+    return vokabeln;
+}
+
+void Mischen(List<int> zahlen)
+{
+    var random = Random.Shared;
+
+    for (int i = 0; i < 2*zahlen.Count; i++)
+    {
+        var i1 = random.Next(zahlen.Count);
+        var i2 = random.Next(zahlen.Count);
+
+        var merker = zahlen[i1];
+
+        zahlen[i1] = zahlen[i2];
+        zahlen[i2] = merker;
+    }
+}
 
 var verzeichnisName = "Vokabeln";
 var pfad = DateiAuswahl(verzeichnisName);
+var vokabeln = AusDatei(pfad);
+var reihenfolge = Enumerable.Range(0, vokabeln.Latein.Count).ToList();
 
-if (!File.Exists(pfad))
+Mischen(reihenfolge);
+
+for (int i = 0; i < vokabeln.Latein.Count; i++)
 {
-    Console.WriteLine($"Die Datei {pfad} gibt es scheinbar nicht!");
-    Environment.Exit(-1);
-}
-
-using var datenStrom = new StreamReader(pfad);
-
-var latein = datenStrom.ReadLine();
-
-while (!string.IsNullOrEmpty(latein))
-{
-    Console.WriteLine($"Übersetze: {latein.Substring(2)}");
+    Console.WriteLine($"Übersetze: {vokabeln.Latein[reihenfolge[i]].Substring(2)}");
     Console.ReadLine();
-
-    var deutsch = datenStrom.ReadLine();
-
-    Console.WriteLine($"Richtig: {deutsch.Substring(2)}");
-
-    latein = datenStrom.ReadLine();
+    Console.WriteLine($"Richtig: {vokabeln.Deutsch[reihenfolge[i]].Substring(2)}");
 }
 
