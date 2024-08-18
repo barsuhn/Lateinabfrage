@@ -1,0 +1,32 @@
+﻿L gaudere
+D sich freuen
+L amicus
+D Freund
+L bene
+D gut
+L studere
+D sich bemühen,studieren
+L tabula
+D (Schreib-)Tafel,Gemädel
+L tenere
+D halten,festhalten,besitzen,beherrschen
+L praebere
+D geben,hinhalten
+L iam
+D schon,bereits,nun
+L primo
+D zuerst
+L tum
+D da,dann,darauf,damals
+L recte
+D richtig,zu Recht
+L non iam
+D nicht mehr
+L saepe
+D oft
+L nunquam
+D niemals
+L sic
+D so
+L semper
+D immer

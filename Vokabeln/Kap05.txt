@@ -1,0 +1,30 @@
+﻿L sonus
+D Ton,Klang,Geräusch
+L terrere
+D erschrecken
+L latere
+D verborgen sein
+L subito
+D plötzlich
+L gladius
+D Schwert
+L sceleratus
+D Verbrecher
+L flere
+D weinen,beweinen
+L placere
+D gefallen
+L torquere
+D drehen,quälen
+L tantum
+D nur
+L cui?
+D wem?
+L statim
+D sofort
+L etiam
+D auch,sogar
+L iterum
+D wiederum,zum zweiten Mal
+L itaque
+D deshalb
